@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:alpine320
+FROM kalilinux/kali-rolling:latest
 
 # set version label
 ARG BUILD_DATE
@@ -8,7 +8,7 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="thelamer"
 
 # title
-ENV TITLE="Alpine XFCE"
+ENV TITLE="brutal kali"
 
 RUN \
   echo "**** add icon ****" && \
@@ -16,7 +16,7 @@ RUN \
     /kclient/public/icon.png \
     https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/webtop-logo.png && \
   echo "**** install packages ****" && \
-  apk add --no-cache \
+  apt add --no-cache \
     chromium \
     faenza-icon-theme \
     faenza-icon-theme-xfce4-appfinder \
