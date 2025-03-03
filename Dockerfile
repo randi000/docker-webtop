@@ -1,4 +1,4 @@
-FROM kalilinux/kali-rolling:latest
+FROM lscr.io/linuxserver/webtop:debian-mate
 
 # set version label
 ARG BUILD_DATE
@@ -8,7 +8,7 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="thelamer"
 
 # title
-ENV TITLE="brutal kali"
+ENV TITLE="webtop"
 
 RUN \
   echo "**** add icon ****" && \
