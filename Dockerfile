@@ -16,7 +16,7 @@ RUN \
     /kclient/public/icon.png \
     https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/webtop-logo.png && \
   echo "**** install packages ****" && \
-  apt add --no-cache \
+  apk add --no-cache \
     chromium \
     faenza-icon-theme \
     faenza-icon-theme-xfce4-appfinder \
